@@ -13,6 +13,9 @@
         <header>
             <h1 class="logo">DroneHub</h1>
 
+            <span class="cart-count" id="cartIcon">🛒 Cart: <strong id="cartCount">0</strong></span>
+
+
             <div class="search-container">
                 <input type="text" placeholder="Search products...">
             </div>
@@ -32,77 +35,149 @@
             <!-- Products Section -->
             <section class="products">
                 <h2>Our Products</h2>
+
                 <div class="product-grid">
+
                     <!-- Product 1 -->
-                    <div class="product">
+                    <div class="product"
+                        data-name="Dji mini 4 pro"
+                        data-price="45000"
+                        data-description="Lightweight, professional-quality drone with 4K shooting."
+                        data-image="images/product1.jpg">
+
                         <img src="images/product1.jpg" alt="Product 1">
                         <h3>Dji mini 4 pro</h3>
                         <p>&#8369;45,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
+
                     <!-- Product 2 -->
-                    <div class="product">
+                    <div class="product"
+                        data-name="Dji mini 3 pro"
+                        data-price="30000"
+                        data-description="Compact drone ideal for beginners and hobby flyers."
+                        data-image="images/product2.jpg">
+
                         <img src="images/product2.jpg" alt="Product 2">
                         <h3>Dji mini 3 pro</h3>
                         <p>&#8369;30,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
+
                     <!-- Product 3 -->
-                    <div class="product">
+                    <div class="product"
+                        data-name="Dji avata 1"
+                        data-price="47000"
+                        data-description="FPV-style drone perfect for fast-action aerial footage."
+                        data-image="images/product3.jpg">
+
                         <img src="images/product3.jpg" alt="Product 3">
                         <h3>Dji avata 1</h3>
                         <p>&#8369;47,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
+
                     <!-- Product 4 -->
-                    <div class="product">
+                    <div class="product"
+                        data-name="Dji air 3"
+                        data-price="65000"
+                        data-description="High-performance drone with strong wind resistance."
+                        data-image="images/product4.jpg">
+
                         <img src="images/product4.jpg" alt="Product 4">
                         <h3>Dji air 3</h3>
                         <p>&#8369;65,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
+
                     <!-- Product 5 -->
-                    <div class="product">
+                    <div class="product"
+                        data-name="Dji phantom 4 pro"
+                        data-price="85000"
+                        data-description="Top-tier professional drone for filmmaking."
+                        data-image="images/product5.jpg">
+
                         <img src="images/product5.jpg" alt="Product 5">
                         <h3>Dji phantom 4 pro</h3>
                         <p>&#8369;85,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
+
                     <!-- Product 6 -->
-                    <div class="product">
+                    <div class="product"
+                        data-name="Dji avata 2"
+                        data-price="55000"
+                        data-description="Upgraded FPV drone for immersive flight experience."
+                        data-image="images/product6.jpg">
+
                         <img src="images/product6.jpg" alt="Product 6">
                         <h3>Dji avata 2</h3>
                         <p>&#8369;55,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
-                     <!-- Product 7 -->
-                     <div class="product">
+
+                    <!-- Product 7 -->
+                    <div class="product"
+                        data-name="Dji neo"
+                        data-price="14000"
+                        data-description="Entry-level drone great for practice flying."
+                        data-image="images/product7.jpg">
+
                         <img src="images/product7.jpg" alt="Product 7">
                         <h3>Dji neo</h3>
                         <p>&#8369;14,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
-                     <!-- Product 8 -->
-                     <div class="product">
+
+                    <!-- Product 8 -->
+                    <div class="product"
+                        data-name="Dji inspire"
+                        data-price="150000"
+                        data-description="Professional-grade drone for cinema-level aerial shots."
+                        data-image="images/product8.jpg">
+
                         <img src="images/product8.jpg" alt="Product 8">
                         <h3>Dji inspire</h3>
                         <p>&#8369;150,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
-                     <!-- Product 9 -->
-                     <div class="product">
+
+                    <!-- Product 9 -->
+                    <div class="product"
+                        data-name="Dji mini 2 SE"
+                        data-price="23000"
+                        data-description="Affordable compact drone perfect for travel."
+                        data-image="images/product9.jpg">
+
                         <img src="images/product9.jpg" alt="Product 9">
                         <h3>Dji mini 2 SE</h3>
                         <p>&#8369;23,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
-                     <!-- Product 10 -->
-                     <div class="product">
+
+                    <!-- Product 10 -->
+                    <div class="product"
+                        data-name="Dji mavic 3 pro"
+                        data-price="90000"
+                        data-description="Flagship aerial drone with outstanding 4K capabilities."
+                        data-image="images/product10.jpg">
+
                         <img src="images/product10.jpg" alt="Product 10">
                         <h3>Dji mavic 3 pro</h3>
                         <p>&#8369;90,000.00</p>
-                        <button>Add to Cart</button>
+                        <button class="view-btn">View Details</button>
+                        <button class="add-btn">Add to Cart</button>
                     </div>
+
                 </div>
             </section>
         </main>
@@ -113,5 +188,29 @@
         </footer>
 
     </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">✖</span>
+            <img id="modalImage" src="" alt="">
+            <h2 id="modalName"></h2>
+            <p id="modalDescription"></p>
+            <h3 id="modalPrice"></h3>
+            <button id="modalAddCartBtn">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- CART MODAL -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <span id="closeCart" class="close-cart">×</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems" class="cart-items"></div>
+    </div>
+  </div>
+
+    <script src="product.js"></script>
+
 </body>
 </html>
