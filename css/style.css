@@ -132,6 +132,34 @@ header input[type="text"] {
 }
 
 
+.hero2 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Title */
+.hero2 h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* 2-column video layout */
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* makes responsive on small screens */
+}
+
+/* Video size */
+.hero-video {
+    width: 45%;          /* makes videos large and side-by-side */
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+
+
 .products {
     padding: 60px 20px;
     text-align: center;
@@ -327,6 +355,29 @@ footer p {
     margin-right: 10px;
     border-radius: 5px;
 }
+.cart-total {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.checkout-btn:hover {
+    background: #0a58ca;
+}
+
 
 .remove-btn {
     background: red;

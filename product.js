@@ -47,6 +47,8 @@ document.querySelectorAll(".product").forEach(product => {
 const cartModal = document.getElementById("cartModal");
 const cartItemsContainer = document.getElementById("cartItems");
 const closeCartBtn = document.getElementById("closeCart");
+const cartTotal = document.getElementById("cartTotal");
+const checkoutBtn = document.getElementById("checkoutBtn");
 
 // Open cart modal
 document.getElementById("cartIcon").onclick = () => {
@@ -59,6 +61,7 @@ closeCartBtn.onclick = () => {
     cartModal.style.display = "none";
 };
 
+// ADD TO CART
 function addToCart(name, price) {
     cart.push({ name, price });
     cartCount.textContent = cart.length;
@@ -78,10 +81,15 @@ function updateCartUI() {
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = `<p class='empty'>Your cart is empty.</p>`;
+        cartTotal.innerHTML = "";
         return;
     }
 
+    let total = 0;
+
     cart.forEach((item, index) => {
+        total += Number(item.price);
+
         let div = document.createElement("div");
         div.classList.add("cart-item");
         div.innerHTML = `
@@ -90,4 +98,21 @@ function updateCartUI() {
         `;
         cartItemsContainer.appendChild(div);
     });
+
+    // Show total price
+    cartTotal.innerHTML = `Total: <strong>₱${total.toLocaleString()}</strong>`;
 }
+
+// CHECKOUT BUTTON
+checkoutBtn.onclick = () => {
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+
+    alert("Thank you for your purchase!");
+    cart = [];
+    cartCount.textContent = "0";
+    updateCartUI();
+    cartModal.style.display = "none";
+};
