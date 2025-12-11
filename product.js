@@ -70,10 +70,37 @@ function addToCart(name, price) {
 
 // REMOVE ITEM
 function removeItem(index) {
-    cart.splice(index, 1);
-    cartCount.textContent = cart.length;
-    updateCartUI();
+    // Optionally hide cart modal to ensure Swal is visible
+    cartModal.style.display = "none";
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "This item will be removed from your cart.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, remove it!',
+        cancelButtonText: 'Cancel',
+        customClass: {
+            popup: 'swal-popup' // ensure z-index
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            cart.splice(index, 1);
+            cartCount.textContent = cart.length;
+            updateCartUI();
+            Swal.fire({
+                title: 'Removed!',
+                text: 'The item has been removed.',
+                icon: 'success',
+                customClass: {
+                    popup: 'swal-popup'
+                }
+            });
+        }
+    });
 }
+
+
 
 // UPDATE CART UI
 function updateCartUI() {
@@ -103,16 +130,30 @@ function updateCartUI() {
     cartTotal.innerHTML = `Total: <strong>₱${total.toLocaleString()}</strong>`;
 }
 
+
 // CHECKOUT BUTTON
 checkoutBtn.onclick = () => {
     if (cart.length === 0) {
-        alert("Your cart is empty.");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops!',
+            text: 'Your cart is empty.',
+        });
         return;
     }
 
-    alert("Thank you for your purchase!");
-    cart = [];
-    cartCount.textContent = "0";
-    updateCartUI();
+    // Hide modal first
     cartModal.style.display = "none";
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank you!',
+        text: 'Your purchase has been completed.',
+        confirmButtonText: 'OK'
+    }).then(() => {
+        cart = [];
+        cartCount.textContent = "0";
+        updateCartUI();
+    });
 };
+

@@ -208,8 +208,11 @@ header input[type="text"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 1%;
+    justify-content: center;
    
 }
+
 
 .product button:hover {
     background-color: #ff9900;
@@ -232,6 +235,7 @@ header input[type="text"] {
     margin: 20px auto;
     max-width: 800px;
     border-radius: 10px;
+    
 }
 
 .contact {
@@ -265,7 +269,7 @@ header input[type="text"] {
 }
 
 .contact button:hover {
-    background-color: #ff9900;
+    background-color: #20201e9d;
 }
 
 footer {
@@ -304,7 +308,20 @@ footer p {
     width: 100%;
     border-radius: 8px;
 }
-
+#modalAddCartBtn{
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#modalAddCartBtn:hover {
+    background: #f3a201c0;
+    
+}
 .close-modal {
     position: absolute;
     top: 10px;
@@ -365,7 +382,7 @@ footer p {
 .checkout-btn {
     width: 100%;
     padding: 12px;
-    background: #0d6efd;
+    background: #ff9900;
     color: white;
     font-size: 18px;
     border: none;
@@ -375,7 +392,7 @@ footer p {
 }
 
 .checkout-btn:hover {
-    background: #0a58ca;
+    background: #f3a201bb;
 }
 
 
@@ -394,11 +411,14 @@ footer p {
     cursor: pointer;
     font-size: 20px;
 }
+.swal-popup {
+    z-index: 2000 !important; /* Higher than your modal */
+}
 
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
@@ -412,5 +432,10 @@ footer p {
 
     .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .modal-content {
+        width: 50%;
+        height: 50%;
     }
 }
