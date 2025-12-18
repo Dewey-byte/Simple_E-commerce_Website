@@ -14,8 +14,7 @@ This project demonstrates a basic online shopping experience with product browsi
   - [Prerequisites](#prerequisites)  
   - [Installation and Setup](#installation-and-setup)  
 - [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)  
+- [Contributing](#contributing)   
 - [Contact](#contact)
 
 ---
@@ -132,15 +131,3 @@ Created by Dewey-byte – feel free to reach out for feedback or collaboration!
 
 ⭐ Thanks for checking out this project!
 
-
----
-
-If you want, I can also:
-
-✅ generate a **live demo link** section (e.g., GitHub Pages)  
-✅ add **screenshots** or GIF previews  
-✅ include **badges** (e.g., license, stars)  
-✅ customize content based on your exact code
-
-Just tell me!
-::contentReference[oaicite:0]{index=0}
