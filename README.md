@@ -14,7 +14,8 @@ This project demonstrates a basic online shopping experience with product browsi
   - [Prerequisites](#prerequisites)  
   - [Installation and Setup](#installation-and-setup)  
 - [Usage](#usage)  
-- [Contributing](#contributing)   
+- [Contributing](#contributing)
+- [License](#license) 
 - [Contact](#contact)
 
 ---
@@ -124,6 +125,10 @@ Commit your changes (git commit -m "Add NewFeature")
 Push to the branch (git push origin feature/NewFeature)
 
 Open a Pull Request
+
+📄 License
+
+This project is open-source and available under the MIT License.
 
 📬 Contact
 
